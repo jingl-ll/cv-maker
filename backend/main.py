@@ -17,7 +17,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://localhost:4173",
-        "https://jingluis.github.io",  # update to your actual GitHub Pages URL
+        "https://jingl-ll.github.io",
     ],
     allow_methods=["POST"],
     allow_headers=["Content-Type"],
