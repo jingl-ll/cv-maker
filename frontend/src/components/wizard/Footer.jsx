@@ -32,7 +32,7 @@ export default function Footer() {
       <span className={styles.dot}>·</span>
       <a
         className={styles.link}
-        href="https://github.com/jingluis/cv-maker"
+        href="https://github.com/jingl-ll/cv-maker"
         target="_blank"
         rel="noreferrer"
       >
