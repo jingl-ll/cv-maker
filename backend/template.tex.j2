@@ -98,7 +98,7 @@
 \section{Summary}
   \resumeItemListStart
   << for item in cv.summary >>
-    \resumeItem{<{ tex(item) }>}
+    \resumeItem{<< if item.bold >>\textbf{<{ tex(item.text) }>}<< else >><{ tex(item.text) }><< endif >>}
   << endfor >>
   \resumeItemListEnd
 << endif >>
@@ -131,7 +131,7 @@
     << if exp.bullets >>
     \resumeItemListStart
       << for bullet in exp.bullets >>
-      \resumeItem{<{ tex(bullet) }>}
+      \resumeItem{<< if bullet.bold >>\textbf{<{ tex(bullet.text) }>}<< else >><{ tex(bullet.text) }><< endif >>}
       << endfor >>
     \resumeItemListEnd
     << endif >>
@@ -149,7 +149,7 @@
           << if proj.bullets >>
           \resumeItemListStart
             << for bullet in proj.bullets >>
-            \resumeItem{<{ tex(bullet) }>}
+            \resumeItem{<< if bullet.bold >>\textbf{<{ tex(bullet.text) }>}<< else >><{ tex(bullet.text) }><< endif >>}
             << endfor >>
           \resumeItemListEnd
           << endif >>

@@ -28,14 +28,54 @@
 .input::placeholder { color: var(--text-muted); }
 .input:focus { outline: none; border-color: var(--accent); }
 
+.inputBold { font-weight: 700; }
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.boldBtn {
+  background: var(--surface3);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.8rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.boldBtn:hover { border-color: var(--accent); color: var(--accent); }
+
+.boldActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.boldActive:hover { background: var(--accent-dim); border-color: var(--accent-dim); color: #fff; }
+
 .removeBtn {
   background: none;
   border: none;
   font-size: 1.2rem;
   color: var(--text-muted);
   cursor: pointer;
-  padding: 0.4rem;
-  line-height: 1;
+  padding: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   transition: color 0.15s;
 }

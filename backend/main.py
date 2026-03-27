@@ -38,6 +38,11 @@ jinja_env = Environment(
 
 # ---------- Pydantic models ----------
 
+class BulletItem(BaseModel):
+    text: str = ""
+    bold: bool = False
+
+
 class ExtraField(BaseModel):
     label: str = ""
     value: str = ""
@@ -63,19 +68,19 @@ class ExperienceEntry(BaseModel):
     company: str = ""
     location: str = ""
     dates: str = ""
-    bullets: list[str] = []
+    bullets: list[BulletItem] = []
 
 
 class ProjectEntry(BaseModel):
     name: str = ""
     role: str = ""
     date: str = ""
-    bullets: list[str] = []
+    bullets: list[BulletItem] = []
 
 
 class CVData(BaseModel):
     header: Header = Header()
-    summary: list[str] = []
+    summary: list[BulletItem] = []
     education: list[EducationEntry] = []
     experience: list[ExperienceEntry] = []
     projects: list[ProjectEntry] = []
